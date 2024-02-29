@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5XuOp3YiGP33+X4vKklH2PkZkPHrgWLS6wXfZnVbCFr24WAb0S3PixE1ioBoHv/NeU8bd+pJEyW6SAEgqAVP/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\BrianAbbott\\dev_space\\GitHub_BrianCAbbott\\DotNetNew\\Mobile\\DNN_Mobile_Projects\\iOSApp\\iOSApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BrianAbbott\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.2\\microsoft.net.illink.tasks.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
