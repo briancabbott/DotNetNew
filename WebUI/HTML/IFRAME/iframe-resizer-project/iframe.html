@@ -1,0 +1,53 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Page Title</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/iframeResizer.contentWindow.min.js"></script>
+        <script>
+            let phoneNumber = undefined;
+            var iFrameResizer = {
+                log: true,
+                autoResize: false,
+                sizeWidth: true,
+                onMessage: function(message) {
+                    console.log('message', message);
+                    phoneNumber = message.phoneNumber;
+                }
+            }
+
+            function call() {
+                console.log('call', phoneNumber);
+            }
+
+            function storeSize() {
+                this.x = this.offsetWidth
+                this.y = this.offsetHeight
+            }
+
+            function setSize() {
+                if (this.offsetWidth !== this.x || this.offsetHeight !== this.y) {
+                    if ('parentIFrame' in window) 
+                        parentIFrame.size()
+                    store.call(this)
+                }
+            }
+        </script>    
+    </head>
+    <style>
+        iframe {
+            width: 1px;
+            min-width: 100%;
+        }
+    </style>
+    <body>
+        Inside Iframe
+        <button onclick="call()" >call</button>
+    </body>
+</html>

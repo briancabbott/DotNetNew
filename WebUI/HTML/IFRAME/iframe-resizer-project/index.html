@@ -1,0 +1,46 @@
+
+
+<html>
+    <head>    
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/iframeResizer.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+    </head>
+    <style>
+        iframe {
+            width: 1px;
+            min-width: 100%;
+        }
+    </style>
+
+
+    <body onload="sendNumber()">
+        <iframe id="myIframe" title="My Iframe" src="iframe.html">
+        </iframe>
+
+        <script>
+            iFrameResize({ 
+                log: true, 
+                resizeFrom: "child",
+                onResized: function (messageData) {
+                },
+                onMouseEnter: function (messageData) {
+                },
+                onMouseLeave: function (messageData) {
+                },
+                onMessage: function (messageData) {
+                    console.log('messageData', messageData);
+                },
+                onClosed: function (id) {
+                    console.log("end calls");
+                },
+            }, '#myIframe');
+        
+            function sendNumber() {
+                console.log('sendNumber');
+                document.getElementById('myIframe').iFrameResizer.sendMessage({"phoneNumber": "1234567890"});
+            }
+        </script>
+    </body>
+</html>
